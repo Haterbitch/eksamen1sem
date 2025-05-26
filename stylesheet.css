@@ -1,30 +1,11 @@
-
-
-/* Nanna 1: App-container */
-.nanna-app-indpakning {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff9f4;
-    border-radius: 10px;
-}
-
-/* Nanna 2: Avatar-stil */
-.nanna-avatar {
-    width: 100px;
-    height: 100px;
-    background-color: #ccc;
-    border: 5px solid white;
-}
-
-/* Nanna 3: Liste-indpakning */
-.nanna-opgaveliste {
+/* Opgave-liste styling */
+.task-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-
-/* Nanna 4: Opgave-kort */
-.nanna-opgave {
+/* Fælles stil for opgaver */
+.task {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,72 +13,20 @@
     border-radius: 20px;
     font-weight: 500;
 }
-
-/* Lilla opgavebaggrund */
-.nanna-lilla {
+/* Farver til opgaver */
+.task.purple {
     background-color: #e6d4f7;
     color: black;
 }
 
-/* Grå opgavebaggrund */
-.nanna-graa {
+.task.gray {
     background-color: #a0a0a0;
     color: white;
 }
 
-/* Nanna 5: Swipe-toggle styling */
-.nanna-swipe-toggle {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-}
-
-.nanna-swipe-toggle input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* Selve slideren */
-.nanna-toggle-slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    border-radius: 30px;
-    transition: 0.4s;
-}
-
-/* Rund "knap" på slideren */
-.nanna-toggle-slider::before {
-    position: absolute;
-    content: "";
-    height: 24px;
-    width: 24px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    border-radius: 50%;
-    transition: 0.4s;
-}
-
-/* Når checked: skift farve og position */
-.nanna-swipe-toggle input:checked + .nanna-toggle-slider {
-    background-color: #66d3c2;
-}
-
-.nanna-swipe-toggle input:checked + .nanna-toggle-slider::before {
-    transform: translateX(30px);
-}
-
-/* Nanna 6: Plus-knap nederst */
-.nanna-plusknap {
-    width: 60px;
-    height: 60px;
-    font-size: 30px;
-    line-height: 30px;
+.app-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff9f4;
+    border-radius: 10px;
 }
