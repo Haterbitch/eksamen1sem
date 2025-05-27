@@ -4,14 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Remember App</title>
-    <script src="../eksamen1sem/slidetoaccept.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css" />
+    <script src="js.js"></script>
 </head>
 <body>
 
+<!-- Nanna 1: Topbjælke med hilsen og menu -->
+<div class="container-fluid nanna-1 d-flex justify-content-between align-items-start p-3">
+    <div>
+        <p class="text-white mb-0">Hej Amalie</p>
+        <p class="text-white fw-bold">Du har styr på det!</p>
+    </div>
+    <button class="btn btn-white">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
 
-<slide-to-accept text="Luk altan dør" success-text="Du er God 🎉"></slide-to-accept>
+<div class="nanna-2 d-flex justify-content-between align-items-center px-3 py-2" id="nannaContainer">
+    <span class="nanna-tekst">Slukke Glattejern</span>
+    <label class="nanna-toggle-switch">
+        <input type="checkbox" id="nannaToggle">
+        <span class="nanna-toggle-slider"></span>
+    </label>
+</div>
+
 
 </body>
 </html>
