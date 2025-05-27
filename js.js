@@ -1,6 +1,6 @@
 
-    const toggle = document.getElementById("nanna-toggle-5");
-    const container = document.getElementById("nanna-container-5");
+    const toggle = document.getElementById("nanna-toggle-5","nanna-container-3","nanna-container-4");
+    const container = document.getElementById("nanna-container-5","nanna-container-3","nanna-container-4");
 
     function opdaterContainer() {
     if (toggle.checked) {
