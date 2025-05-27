@@ -1,9 +1,8 @@
-<script>
-    const toggle = document.getElementById("nanna-toggle");
-    const container = document.getElementById("nanna-2");
 
-    // Funktion der skifter mellem klasser
-    function skiftBaggrund() {
+    const toggle = document.getElementById("nanna-toggle-5");
+    const container = document.getElementById("nanna-container-5");
+
+    function opdaterContainer() {
     if (toggle.checked) {
     container.classList.remove("nanna-inaktiv");
     container.classList.add("nanna-aktiv");
@@ -13,7 +12,5 @@
 }
 }
 
-    // Kør når toggle ændres + når siden loader
-    toggle.addEventListener("change", skiftBaggrund);
-    window.addEventListener("DOMContentLoaded", skiftBaggrund);
-</script>
+    toggle.addEventListener("change", opdaterContainer);
+    window.addEventListener("DOMContentLoaded", opdaterContainer);

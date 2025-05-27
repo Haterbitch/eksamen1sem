@@ -27,7 +27,7 @@
 
 /* Nanna 2: Opgave-container */
 .nanna-2 {
-    background-color: #dbc7f3; /* lilla baggrund */
+
     border-radius: 999px;
     margin: 10px auto;
     width: 90%;
@@ -96,3 +96,73 @@
     transform: translateX(28px);
 }
 
+
+
+/* Nanna 5: Udseende for containeren */
+.nanna-5 {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 999px;
+    transition: background-color 0.3s ease;
+}
+
+/* Inaktiv (grå) baggrund */
+.nanna-inaktiv {
+    background-color: #808080;
+}
+
+/* Aktiv (lilla) baggrund */
+.nanna-aktiv {
+    background-color: #dbc7f3;
+}
+
+/* Teksten */
+.nanna-tekst {
+    color: white;
+    font-weight: 500;
+}
+
+/* Toggle-knap */
+.nanna-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+}
+
+.nanna-toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.nanna-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #d1d1d1;
+    border-radius: 999px;
+    transition: 0.4s;
+}
+
+.nanna-slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 3px;
+    bottom: 3px;
+    background-color: black;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.nanna-toggle-switch input:checked + .nanna-slider {
+    background-color: #a8d8cb;
+}
+
+.nanna-toggle-switch input:checked + .nanna-slider::before {
+    transform: translateX(28px);
+    background-color: white;
+}
