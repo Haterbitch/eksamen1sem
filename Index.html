@@ -10,7 +10,7 @@
 <body>
 
 <!-- Nanna 1: Topbjælke med hilsen og menu -->
-<div class="container-fluid nanna-1 d-flex justify-content-between align-items-start p-3">
+<div class="container-fluid nanna-1 d-flex justify-content-between align-items-start position-relative">
     <div>
         <p class="text-white mb-0">Hej Amalie</p>
         <p class="text-white fw-bold">Du har styr på det!</p>
@@ -18,9 +18,14 @@
     <button class="btn btn-white">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="avatar">
+        <img class="avatar-img" src="ChatGPT%20Image%2023.%20maj%202025,%2012.30.00.png">
+    </div>
 </div>
 
 
+
+<div class="main-container">
 <!-- Nanna 5: Container der skifter farve med toggle -->
 <div id="nanna-container-5" class="nanna-5 nanna-inaktiv d-flex justify-content-between align-items-center px-3 py-2">
     <span class="nanna-tekst">Luk altan dør</span>
@@ -49,9 +54,10 @@
     </label>
 </div>
 
-
-
-
+<button class="knaptilføj" aria-label="Tilføj">
+    <img src="plus-svgrepo-com.svg" alt="">
+</button>
+</div>
 <!-- JS placeres nu lige før body slut for ekstra sikkerhed -->
 <script src="js.js"></script>
 </body>
