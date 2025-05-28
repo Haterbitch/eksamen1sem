@@ -26,6 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.querySelector('.dropdown-toggle').onclick = function(e) {
+    e.stopPropagation();
+    document.querySelector('.dropdown').classList.toggle('open');
+};
 
+document.body.onclick = function() {
+    document.querySelector('.dropdown').classList.remove('open');
+};
 
 
