@@ -102,7 +102,6 @@
     border-bottom-right-radius: 20px;
     border: 7px solid white;
     padding: 1rem 1rem 70px;
-    text-align: center;
 
 }
 .main-container3{
@@ -238,6 +237,11 @@ position: absolute;
 .nanna-tekst {
     color: white;
     font-weight: 500;
+}
+
+.nanna-tekst2{
+    color: #555555FF;
+    padding-bottom: 15px;
 }
 
 /* Toggle-knap */
