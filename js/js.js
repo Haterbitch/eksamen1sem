@@ -34,5 +34,3 @@ document.querySelector('.dropdown-toggle').onclick = function(e) {
 document.body.onclick = function() {
     document.querySelector('.dropdown').classList.remove('open');
 };
-
-

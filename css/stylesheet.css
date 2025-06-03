@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding: 8px;
+    padding: 4px;
 }
 
 .dropdown-menu {
@@ -48,6 +48,17 @@
 /* her slutter menu
 
  */
+
+.menu-knap{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: none;
+    justify-content: right;
+    display: flex;
+    right: 10px;
+    color: #FFF8F0;
+}
 .knaptilføj {
     z-index: 1000;                /* Sørg for at den er øverst */
     position: fixed;              /* Fast placeret, også når man scroller */
@@ -126,18 +137,6 @@ position: absolute;
         aspect-ratio: 1/1;
         border-radius: 50%;
         border: 7px solid white;
-    }
-}
-
-
-/* Media query til større skærme */
-@media (min-width: 576px) {
-    .nanna-1 {
-        height: 120px;
-    }
-
-    .nanna-2 {
-        padding: 2rem 4rem;
     }
 }
 
@@ -310,3 +309,5 @@ position: absolute;
     justify-content: center;
     align-items: center;
 }
+
+
