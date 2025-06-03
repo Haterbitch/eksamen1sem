@@ -34,3 +34,30 @@ document.querySelector('.dropdown-toggle').onclick = function(e) {
 document.body.onclick = function() {
     document.querySelector('.dropdown').classList.remove('open');
 };
+
+
+
+<!-- Modal funktionalitet -->
+
+    // Åbn modal
+    document.getElementById('openModalBtn').onclick = function() {
+    document.getElementById('customModal').style.display = 'block';
+};
+    // Luk modal med X eller LUK-knap
+    document.getElementById('closeModalBtn').onclick =
+    document.getElementById('closeBtn').onclick = function() {
+    document.getElementById('customModal').style.display = 'none';
+};
+    // Tilføj-knap (tilpas evt. funktionalitet)
+    document.getElementById('addBtn').onclick = function() {
+    alert('Tilføjet: ' + document.getElementById('inputText').value);
+    document.getElementById('customModal').style.display = 'none';
+};
+    // Luk modal hvis der klikkes uden for modal-indholdet
+    window.onclick = function(event) {
+    if (event.target == document.getElementById('customModal')) {
+    document.getElementById('customModal').style.display = 'none';
+}
+}
+
+

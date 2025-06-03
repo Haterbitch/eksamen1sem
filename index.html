@@ -17,13 +17,13 @@
             Du har styr på det!</p>
  <!-- drop down menu start -->
         <div class="dropdown">
-            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
             </button>
-            <div class="dropdown-menu">
-                <a href="index.html">Profil</a>
-                <a href="omremember.html">Om Remember?</a>
-            </div>
+            <ul class="dropdown-menu">
+                <li><a href="index.html" class="dropdown-item" type="button">Profil</a></li>
+                <li><a href="omremember.html" class="dropdown-item" type="button">Om Remember?</a></li>
+            </ul>
         </div>
     </div>
     <!--SLUT drop down menu  -->
@@ -70,10 +70,26 @@
     <!--SLUT Toggle knapper -->
 
     <!--START footer knap -->
-    <a href="underside.html"> <button class="knaptilføj" aria-label="Tilføj">
-    <img src="billeder/plus-svgrepo-com.svg" alt="">
-</button></a>
-</div>
+    <!-- Knap der åbner modal -->
+    <button class="knaptilføj" id="openModalBtn" aria-label="Tilføj">
+        <img src="billeder/plus-svgrepo-com.svg" alt="">
+    </button>
+    <!-- Modal vindue (skjult som standard) -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <!-- Luk knap (X) -->
+            <span class="close" id="closeModalBtn">&times;</span>
+            <!-- Skriv felt -->
+            <label for="inputText">Skriv Din nye Opgave her:</label>
+            <input type="text" id="inputText" class="modal-input" />
+            <div class="modal-btns">
+                <!-- Tilføj knap -->
+                <button id="addBtn">Tilføj</button>
+                <!-- Luk knap -->
+                <button id="closeBtn">Luk</button>
+            </div>
+        </div>
+    </div>
 <!--SLUT footer knap -->
 
 
