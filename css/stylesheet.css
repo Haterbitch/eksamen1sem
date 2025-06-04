@@ -363,3 +363,22 @@ position: absolute;
     cursor: pointer; background: #ff8360; color: #fff8f0; font-weight: bold;
 }
 .modal-btns button#closeBtn { background: #aaa; }
+
+
+@media only screen and (orientation: landscape) {
+    .topnav .dropdown-menu {
+        display: block;
+        display: flex;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .topnav .dropdown-toggle {
+        display: none;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+
+    }
+}
