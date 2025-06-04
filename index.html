@@ -1,21 +1,26 @@
-<!DOCTYPE html>
-<html lang="da">
+<!--
+Sektion: Dokument og sprog
+-->
+<!DOCTYPE html> <!-- Angiver at dette er et HTML5 dokument -->
+<html lang="da"> <!-- Starter HTML-dokumentet på dansk -->
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Remember App</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/stylesheet.css" />
+    <meta charset="UTF-8" /> <!-- Definerer tegnsættet som UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Gør siden responsiv på mobile enheder -->
+    <title>Remember App</title> <!-- Titel på fanen/vinduet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Importerer Bootstrap CSS -->
+    <link rel="stylesheet" href="css/stylesheet.css" /> <!-- Importerer egen CSS-fil -->
 </head>
 <body>
 
-<!-- Nanna 1: Topbjælke med hilsen og menu -->
+<!--
+Sektion: Topbjælke med hilsen og menu
+-->
 <div class="container-fluid nanna-1 d-flex justify-content-between align-items-start position-relative">
     <div>
         <p class="nanna-tekst2 fw-bold mb-0">Hej Amalie
             <br>
             Du har styr på det!</p>
- <!-- drop down menu start -->
+        <!-- Drop down menu start -->
         <div class="dropdown topnav">
             <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Menu
@@ -25,10 +30,10 @@
                 <li><a href="omremember.html" class="dropdown-item" type="button">Om Remember?</a></li>
             </ul>
         </div>
+        <!-- SLUT drop down menu -->
     </div>
-    <!--SLUT drop down menu  -->
 
-    <!--STart avatar hoved -->
+    <!-- Avatar hoved start -->
     <button class="btn btn-white">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -36,40 +41,41 @@
         <img class="avatar-img" src="billeder/amalie.png" alt="" />
     </div>
 </div>
-<!--SLUT avatar hoved -->
+<!-- SLUT avatar hoved -->
 
-<!--START Toggle knapper -->
+<!--
+Sektion: Toggle knapper og hovedindhold
+-->
 <div class="main-container">
-<!-- Nanna 5: Container der skifter farve med toggle -->
-<div id="nanna-container-5" class="nanna-5 nanna-inaktiv d-flex justify-content-between align-items-center px-3 py-2">
-    <span class="nanna-tekst">Luk altan dør</span>
-    <label class="nanna-toggle-switch">
-        <input type="checkbox" id="nanna-toggle-5">
-        <span class="nanna-slider"></span>
-    </label>
-</div>
+    <!-- Container der skifter farve med toggle -->
+    <div id="nanna-container-5" class="nanna-5 nanna-inaktiv d-flex justify-content-between align-items-center px-3 py-2">
+        <span class="nanna-tekst">Luk altan dør</span>
+        <label class="nanna-toggle-switch">
+            <input type="checkbox" id="nanna-toggle-5">
+            <span class="nanna-slider"></span>
+        </label>
+    </div>
 
+    <div id="nanna-container-4" class="nanna-5 nanna-inaktiv d-flex justify-content-between align-items-center px-3 py-2">
+        <span class="nanna-tekst">Sluk Glatte jern</span>
+        <label class="nanna-toggle-switch">
+            <input type="checkbox" id="nanna-toggle-4">
+            <span class="nanna-slider"></span>
+        </label>
+    </div>
 
+    <div id="nanna-container-3" class="nanna-5 nanna-inaktiv d-flex justify-content-between align-items-center px-3 py-2">
+        <span class="nanna-tekst">Husk Nøgler</span>
+        <label class="nanna-toggle-switch">
+            <input type="checkbox" id="nanna-toggle-3">
+            <span class="nanna-slider"></span>
+        </label>
+    </div>
+    <!-- SLUT Toggle knapper -->
 
-<div id="nanna-container-4" class="nanna-5 nanna-inaktiv d-flex justify-content-between align-items-center px-3 py-2">
-    <span class="nanna-tekst">Sluk Glatte jern</span>
-    <label class="nanna-toggle-switch">
-        <input type="checkbox" id="nanna-toggle-4">
-        <span class="nanna-slider"></span>
-    </label>
-</div>
-
-
-<div id="nanna-container-3" class="nanna-5 nanna-inaktiv d-flex justify-content-between align-items-center px-3 py-2">
-    <span class="nanna-tekst">Husk Nøgler</span>
-    <label class="nanna-toggle-switch">
-        <input type="checkbox" id="nanna-toggle-3">
-        <span class="nanna-slider"></span>
-    </label>
-</div>
-    <!--SLUT Toggle knapper -->
-
-    <!--START footer knap -->
+    <!--
+    Sektion: Footer-knap og modal vindue
+    -->
     <!-- Knap der åbner modal -->
     <button class="knaptilføj" id="openModalBtn" aria-label="Tilføj">
         <img src="billeder/plus-svgrepo-com.svg" alt="">
@@ -90,9 +96,9 @@
             </div>
         </div>
     </div>
-<!--SLUT footer knap -->
+    <!-- SLUT footer knap -->
+</div>
 
-
-<script src="js/js.js"></script>
+<script src="js/js.js"></script> <!-- Importerer JavaScript-filen -->
 </body>
 </html>

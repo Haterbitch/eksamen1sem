@@ -1,384 +1,373 @@
-/* her starter menu
-
- */
-.dropdown {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
+/* her starter menu */ /* Kommentar: Start på menuens CSS */
+.dropdown { /* Dropdown-menuens container */
+    position: absolute; /* Placerer elementet absolut */
+    top: 20px; /* 20px fra toppen af dets nærmeste positionerede forælder */
+    right: 20px; /* 20px fra højre side af containeren */
+    z-index: 1000; /* Sørger for at elementet ligger øverst */
 }
-
-.dropdown-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding: 4px;
-    border-radius: 30px;
-    color: #FF8360;
+.dropdown-toggle { /* Knap til at åbne dropdown-menuen */
+    background: none; /* Ingen baggrundsfarve */
+    border: none; /* Ingen kant */
+    cursor: pointer; /* Viser en hånd når man holder musen over */
+    display: flex; /* Flex layout bruges */
+    flex-direction: column; /* Elementer stables i en kolonne */
+    gap: 4px; /* 4px afstand mellem hver flex-child */
+    padding: 4px; /* 4px indvendig margen */
+    border-radius: 30px; /* Runde hjørner med radius 30px */
+    color: #FF8360; /* Orange tekstfarve */
 }
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    right: 0;
-    margin-top: 12px;
-    background: #FFF8F0;
-    color: #FF8360;
-    border: 1px solid #eee;
-    border-radius: 30px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    min-width: 120px;
-}
-.dropdown-menu a {
-    display: block;
-    padding: 12px 16px;
-    color: #FF8360;
-    text-decoration: none;
-    border-bottom: 1px solid #f1f1f1;
-}
-
-.dropdown-menu a:last-child {
-    border-bottom: none;
-}
-
-.dropdown.open .dropdown-menu {
-    display: block;
-}
-
-/* her slutter menu
-
- */
-
-.menu-knap{
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border: none;
-    justify-content: right;
-    display: flex;
-    right: 10px;
-    color: #FFF8F0;
-}
-.knaptilføj {
-    z-index: 1000;                /* Sørg for at den er øverst */
-    position: fixed;              /* Fast placeret, også når man scroller */
-    left: 50%;
-    bottom: 40px;                 /* Juster afstand fra bunden */
-    transform: translateX(-50%);
-    width: 70px;
-    height: 70px;
-    background: #FF8360;          /* Orange farve - tilpas evt. */
-    color: #FFF8F0;
-    font-size: 70px;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-
-    img {
-        max-width: 100%;
-    }
-}
-
-/* Nanna 1: Grøn topsektion */
-.nanna-1 {
-    background-color: #b3e3d3; /* lysegrøn */
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border: 7px solid white;
-    padding: 1rem 1rem 70px;
-}
-
-
-.main-container {
-    background: #FFF8F0;
-    border: 7px solid white;
-    border-radius: 30px;
-    margin: 0 auto;
-    margin-top: 0;
-    max-width: 100%;
-    min-height: 100%;
-    box-sizing: border-box;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    padding-top: 25px;
-}
-
-.main-container2 {
-    background-color: #FFF8F0;
-    color: #FF8360;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border: 7px solid white;
-    padding: 1rem 1rem 70px;
-
-}
-.main-container3{
-    background-color: #b3e3d3; /* lysegrøn */
-    border-radius: 20px;
-    border: 7px solid white;
-    padding: 1rem 1rem 30px;
-    line-height: 2;
-}
-.avatar{
-position: absolute;
-    bottom: -32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 0;
-    right: 0;
-
-    .avatar-img{
-        width: 120px;
-        height: 120px;
-        aspect-ratio: 1/1;
-    }
-    .avatar-img2{
-        width: 120px;
-        height: 120px;
-        aspect-ratio: 1/1;
-        border-radius: 50%;
-        border: 7px solid white;
-    }
-}
-
-
-/* Nanna 2: Opgave-container */
-.nanna-2 {
-    border-radius: 999px;
-    margin: 10px auto;
-    width: 90%;
-    max-width: 400px;
-    height: 10%;
-}
-
-/* Teksten i venstre side */
-.nanna-tekst {
-    font-weight: 500;
-}
-
-/* Toggle container */
-.nanna-toggle-switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 32px;
-}
-
-/* Skjul checkbox */
-.nanna-toggle-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* Slider baggrund */
-.nanna-toggle-slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: #ccc;
-    border-radius: 999px;
-    transition: 0.4s;
-}
-
-/* Rund hvid knap */
-.nanna-toggle-slider::before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    border-radius: 50%;
-    transition: 0.4s;
-}
-
-
-/* INAKTIV container-farve (grå) */
-.nanna-inaktiv {
-    background-color: #919191;
-}
-
-/* AKTIV container-farve (lilla) */
-.nanna-aktiv {
-    background-color: #dbc7f3;
-}
-/* Når aktiveret – farveskift og flytning */
-.nanna-toggle-switch input:checked + .nanna-toggle-slider {
-    background-color: #a8d8cb; /* mintgrøn når aktiv */
-}
-.nanna-toggle-switch input:checked + .nanna-toggle-slider::before {
-    transform: translateX(28px);
-}
-
-
-
-/* Nanna 5: Udseende for containeren */
-.nanna-5 {
-    width: 90%;
-    max-width: 400px;
-    margin: 20px auto;
-    border-radius: 999px;
-    transition: background-color 0.3s ease;
-}
-
-/* Inaktiv (grå) baggrund */
-.nanna-inaktiv {
-    background-color: #808080;
-}
-
-/* Aktiv (lilla) baggrund */
-.nanna-aktiv {
-    background-color: #dbc7f3;
-}
-
-/* Teksten */
-.nanna-tekst {
-    color: white;
-    font-weight: 500;
-}
-
-.nanna-tekst2{
-    color: #555555FF;
-    padding-bottom: 15px;
-}
-
-/* Toggle-knap */
-.nanna-toggle-switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 32px;
-}
-
-.nanna-toggle-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.nanna-slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: #d1d1d1;
-    border-radius: 999px;
-    transition: 0.4s;
-}
-
-.nanna-slider::before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 3px;
-    bottom: 3px;
-    background-color: black;
-    border-radius: 50%;
-    transition: 0.4s;
-}
-
-.nanna-toggle-switch input:checked + .nanna-slider {
-    background-color: #a8d8cb;
-}
-
-.nanna-toggle-switch input:checked + .nanna-slider::before {
-    transform: translateX(28px);
-    background-color: white;
-}
-
-.nannaknap{
-    background: #FF8360;          /* Orange farve - tilpas evt. */
-    color: #FFF8F0;
-    font-size: 20px;
-    border: none;
-    border-radius: 20%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-}
-.tilføj-wrapper{
-    padding: 10px;
-    color: #FFF8F0;
-    font-size: 20px;
-    border: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* Modal baggrund */
-.modal {
+.dropdown-menu { /* Selve dropdown-listen */
     display: none; /* Skjult som standard */
-    position: fixed;
-    z-index: 9999;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.4); /* Mørk baggrund */
+    position: absolute; /* Placeret absolut i forhold til sin nærmeste positionerede forælder */
+    right: 0; /* Justeret til højre inden i containeren */
+    margin-top: 12px; /* 12px afstand fra toppen */
+    background: #FFF8F0; /* Lys baggrundsfarve */
+    color: #FF8360; /* Orange tekstfarve */
+    border: 1px solid #eee; /* Lys grå kant */
+    border-radius: 30px; /* Runde hjørner */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08); /* Skyggeeffekt */
+    min-width: 120px; /* Minimumsbredde på 120px */
+}
+.dropdown-menu a { /* Links i dropdown-menuen */
+    display: block; /* Linket fylder hele linjen */
+    padding: 12px 16px; /* Indvendig margen på top/bund 12px, sider 16px */
+    color: #FF8360; /* Orange tekst */
+    text-decoration: none; /* Ingen understregning */
+    border-bottom: 1px solid #f1f1f1; /* Lys bundkant mellem links */
+}
+.dropdown-menu a:last-child { /* Sidste link i dropdown-menu */
+    border-bottom: none; /* Fjerner bundkanten på sidste link */
+}
+.dropdown.open .dropdown-menu { /* Når dropdown har klassen open */
+    display: block; /* Viser dropdown-menuen */
+}
+/* her slutter menu */ /* Kommentar: Slut på menuens CSS */
+
+.menu-knap{ /* Udseende for menu-knap */
+    position: fixed; /* Fast placering på skærmen */
+    width: 20px; /* Bredde på 20px */
+    height: 20px; /* Højde på 20px */
+    border: none; /* Ingen kant */
+    justify-content: right; /* Indholdet rettes til højre */
+    display: flex; /* Flex layout */
+    right: 10px; /* 10px fra højre */
+    color: #FFF8F0; /* Lys tekstfarve */
 }
 
-/* Modal indhold */
-.modal-content {
-    background: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%; max-width: 400px;
-    position: relative;
-    display: flex; flex-direction: column; gap: 16px;
-    font-weight: bold;
-}
-
-/* Luk-knap (X) */
-.close {
-    color: #aaa;
-    position: absolute; right: 15px; top: 10px;
-    font-size: 28px; font-weight: bold;
-    cursor: pointer;
-}
-
-/* Input felt */
-.modal-input {
-    width: 100%; padding: 8px; margin-top: 8px; margin-bottom: 12px;
-    border-radius: 5px; border: 1px solid #ccc;
-}
-
-/* Modal knapper */
-.modal-btns {
-    display: flex; gap: 8px; justify-content: flex-end;
-}
-.modal-btns button {
-    padding: 8px 14px; border-radius: 5px; border: none;
-    cursor: pointer; background: #ff8360; color: #fff8f0; font-weight: bold;
-}
-.modal-btns button#closeBtn { background: #aaa; }
-
-
-@media only screen and (orientation: landscape) {
-    .topnav .dropdown-menu {
-        display: block;
-        display: flex;
-        background: transparent;
-        border: none;
-        box-shadow: none;
+.knaptilføj { /* Knap til at tilføje noget */
+    z-index: 1000; /* Sørger for at knappen ligger øverst */
+    position: fixed; /* Fast placering */
+    left: 50%; /* Centreret horisontalt */
+    bottom: 40px; /* 40px fra bunden */
+    transform: translateX(-50%); /* Justerer så knappen er præcist centreret */
+    width: 70px; /* Bredde på 70px */
+    height: 70px; /* Højde på 70px */
+    background: #FF8360; /* Orange baggrund */
+    color: #FFF8F0; /* Lys tekstfarve */
+    font-size: 70px; /* Stor skrifttype */
+    border: none; /* Ingen kant */
+    border-radius: 50%; /* Rund knap */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Skyggeeffekt */
+    display: flex; /* Flex layout */
+    justify-content: center; /* Indholdet i midten horisontalt */
+    align-items: center; /* Indholdet i midten vertikalt */
+    padding: 20px; /* Indvendig margen på 20px */
+    img { /* Billede inde i knappen */
+        max-width: 100%; /* Billedet fylder maks 100% af knappen */
     }
+}
 
-    .topnav .dropdown-toggle {
-        display: none;
-        background: transparent;
-        border: none;
-        box-shadow: none;
+.nanna-1 { /* Grøn topsektion */
+    background-color: #b3e3d3; /* Lysegrøn baggrund */
+    border-bottom-left-radius: 20px; /* Runde nederste venstre hjørne */
+    border-bottom-right-radius: 20px; /* Runde nederste højre hjørne */
+    border: 7px solid white; /* Hvid kant */
+    padding: 1rem 1rem 70px; /* Polstring: top 1rem, sider 1rem, bund 70px */
+}
 
+.main-container { /* Container til hovedindhold */
+    background: #FFF8F0; /* Lys baggrund */
+    border: 7px solid white; /* Hvid kant */
+    border-radius: 30px; /* Runde hjørner */
+    margin: 0 auto; /* Centreret med automatisk margen */
+    max-width: 100%; /* Maks bredde 100% */
+    min-height: 100%; /* Minimumhøjde 100% */
+    box-sizing: border-box; /* Inkluderer kant og polstring i højde/bredde */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Let skygge */
+    padding-top: 25px; /* 25px polstring i toppen */
+}
+
+.main-container2 { /* Alternativ container */
+    background-color: #FFF8F0; /* Lys baggrund */
+    color: #FF8360; /* Orange tekst */
+    border-bottom-left-radius: 20px; /* Runde hjørner */
+    border-bottom-right-radius: 20px; /* Runde hjørner */
+    border: 7px solid white; /* Hvid kant */
+    padding: 1rem 1rem 70px; /* Polstring top/sider/bund */
+}
+
+.main-container3{ /* Grøn container */
+    background-color: #b3e3d3; /* Lysegrøn baggrund */
+    border-radius: 20px; /* Runde hjørner */
+    border: 7px solid white; /* Hvid kant */
+    padding: 1rem 1rem 30px; /* Polstring: top/sider/bund */
+    line-height: 2; /* Linjeafstand */
+}
+
+.avatar{ /* Avatar-container */
+    position: absolute; /* Absolut placeret */
+    bottom: -32px; /* 32px under sin normale position */
+    display: flex; /* Flex layout */
+    justify-content: center; /* Centrerer indholdet horisontalt */
+    align-items: center; /* Centrerer indholdet vertikalt */
+    left: 0; /* Starter helt til venstre */
+    right: 0; /* Slutter helt til højre */
+    .avatar-img{ /* Avatar-billede */
+        width: 120px; /* Bredde 120px */
+        height: 120px; /* Højde 120px */
+        aspect-ratio: 1/1; /* Kvadratisk billede */
+    }
+    .avatar-img2{ /* Alternativ avatar-billede */
+        width: 120px; /* Bredde 120px */
+        height: 120px; /* Højde 120px */
+        aspect-ratio: 1/1; /* Kvadratisk billede */
+        border-radius: 50%; /* Rundt billede */
+        border: 7px solid white; /* Hvid kant */
+    }
+}
+
+.nanna-2 { /* Opgave-container */
+    border-radius: 999px; /* Ekstra runde hjørner */
+    margin: 10px auto; /* 10px margen og centreret */
+    width: 90%; /* Fylder 90% af containeren */
+    max-width: 400px; /* Maks bredde 400px */
+    height: 10%; /* Højde 10% af containeren */
+}
+
+.nanna-tekst { /* Tekst i venstre side */
+    font-weight: 500; /* Halvfed skrift */
+}
+
+.nanna-toggle-switch { /* Toggle container */
+    position: relative; /* Relativt placeret */
+    display: inline-block; /* Vises som inline-blok */
+    width: 60px; /* Bredde 60px */
+    height: 32px; /* Højde 32px */
+}
+
+.nanna-toggle-switch input { /* Skjuler checkboxen */
+    opacity: 0; /* Gør input usynligt */
+    width: 0; /* Bredde 0 */
+    height: 0; /* Højde 0 */
+}
+
+.nanna-toggle-slider { /* Baggrund på slideren */
+    position: absolute; /* Absolut placeret */
+    cursor: pointer; /* Cursor bliver til hånd */
+    top: 0; /* Starter i toppen */
+    left: 0; /* Starter til venstre */
+    right: 0; /* Slutter til højre */
+    bottom: 0; /* Slutter i bunden */
+    background-color: #ccc; /* Grå baggrund */
+    border-radius: 999px; /* Meget runde hjørner */
+    transition: 0.4s; /* Glidende overgang */
+}
+
+.nanna-toggle-slider::before { /* Den runde knap på slideren */
+    position: absolute; /* Absolut placeret */
+    content: ""; /* Ingen tekstindhold */
+    height: 26px; /* Højde 26px */
+    width: 26px; /* Bredde 26px */
+    left: 3px; /* 3px fra venstre */
+    bottom: 3px; /* 3px fra bunden */
+    background-color: white; /* Hvid farve */
+    border-radius: 50%; /* Rund knap */
+    transition: 0.4s; /* Glidende overgang */
+}
+
+.nanna-inaktiv { /* Inaktiv container-farve */
+    background-color: #919191; /* Mørk grå baggrund */
+}
+
+.nanna-aktiv { /* Aktiv container-farve */
+    background-color: #dbc7f3; /* Lilla baggrund */
+}
+
+.nanna-toggle-switch input:checked + .nanna-toggle-slider { /* Når checkboxen er checked */
+    background-color: #a8d8cb; /* Mintgrøn baggrund */
+}
+.nanna-toggle-switch input:checked + .nanna-toggle-slider::before { /* Når checked, flyt knappen */
+    transform: translateX(28px); /* Flytter den runde knap 28px til højre */
+}
+
+.nanna-5 { /* Udseende for containeren */
+    width: 90%; /* Fylder 90% af containeren */
+    max-width: 400px; /* Maks bredde 400px */
+    margin: 20px auto; /* 20px margen og centreret */
+    border-radius: 999px; /* Runde hjørner */
+    transition: background-color 0.3s ease; /* Glidende farveskift */
+}
+
+.nanna-inaktiv { /* Inaktiv (grå) baggrund */
+    background-color: #808080; /* Grå baggrund */
+}
+
+.nanna-aktiv { /* Aktiv (lilla) baggrund */
+    background-color: #dbc7f3; /* Lilla baggrund */
+}
+
+.nanna-tekst { /* Teksten */
+    color: white; /* Hvid tekstfarve */
+    font-weight: 500; /* Halvfed skrift */
+}
+
+.nanna-tekst2{ /* Sekundær tekst */
+    color: #555555FF; /* Mørkegrå tekst */
+    padding-bottom: 15px; /* 15px polstring i bunden */
+}
+
+.nanna-toggle-switch { /* Toggle-knap container */
+    position: relative; /* Relativ placering */
+    display: inline-block; /* Inline-blok */
+    width: 60px; /* Bredde 60px */
+    height: 32px; /* Højde 32px */
+}
+
+.nanna-toggle-switch input { /* Skjuler input */
+    opacity: 0; /* Usynligt */
+    width: 0; /* Bredde 0 */
+    height: 0; /* Højde 0 */
+}
+
+.nanna-slider { /* Selve slideren */
+    position: absolute; /* Absolut placeret */
+    cursor: pointer; /* Hånd-cursor */
+    top: 0; /* Starter i toppen */
+    left: 0; /* Starter til venstre */
+    right: 0; /* Slutter til højre */
+    bottom: 0; /* Slutter i bunden */
+    background-color: #d1d1d1; /* Lys grå baggrund */
+    border-radius: 999px; /* Runde hjørner */
+    transition: 0.4s; /* Glidende overgang */
+}
+
+.nanna-slider::before { /* Den sorte runde knap */
+    position: absolute; /* Absolut placeret */
+    content: ""; /* Ingen tekstindhold */
+    height: 26px; /* Højde 26px */
+    width: 26px; /* Bredde 26px */
+    left: 3px; /* 3px fra venstre */
+    bottom: 3px; /* 3px fra bunden */
+    background-color: black; /* Sort farve */
+    border-radius: 50%; /* Rund knap */
+    transition: 0.4s; /* Glidende overgang */
+}
+
+.nanna-toggle-switch input:checked + .nanna-slider { /* Når input er checked */
+    background-color: #a8d8cb; /* Mintgrøn baggrund */
+}
+
+.nanna-toggle-switch input:checked + .nanna-slider::before { /* Flytter knappen ved checked */
+    transform: translateX(28px); /* Flytter knappen 28px */
+    background-color: white; /* Gør knappen hvid */
+}
+
+.nannaknap{ /* Udseende på tilføj-knap */
+    background: #FF8360; /* Orange baggrund */
+    color: #FFF8F0; /* Lys tekst */
+    font-size: 20px; /* Skriftstørrelse 20px */
+    border: none; /* Ingen kant */
+    border-radius: 20%; /* Runde hjørner */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Skygge */
+    display: flex; /* Flex layout */
+    justify-content: center; /* Centreret horisontalt */
+    align-items: center; /* Centreret vertikalt */
+    padding: 0; /* Ingen polstring */
+}
+.tilføj-wrapper{ /* Wrapper til tilføj-knap */
+    padding: 10px; /* 10px polstring */
+    color: #FFF8F0; /* Lys tekst */
+    font-size: 20px; /* Skriftstørrelse */
+    border: none; /* Ingen kant */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Skygge */
+    display: flex; /* Flex layout */
+    justify-content: center; /* Centreret horisontalt */
+    align-items: center; /* Centreret vertikalt */
+}
+
+.modal { /* Baggrund for modal */
+    display: none; /* Skjult som standard */
+    position: fixed; /* Fast på skærmen */
+    z-index: 9999; /* Ligger øverst */
+    left: 0; /* Starter helt til venstre */
+    top: 0; /* Starter helt i toppen */
+    width: 100%; /* Fylder hele vinduet */
+    height: 100%; /* Fylder hele vinduet */
+    background-color: rgba(0,0,0,0.4); /* Sort gennemsigtig baggrund */
+}
+
+.modal-content { /* Indholdet i modal-vinduet */
+    background: #fff; /* Hvid baggrund */
+    margin: 10% auto; /* 10% fra toppen og centreret horisontalt */
+    padding: 20px; /* 20px polstring */
+    border-radius: 10px; /* Runde hjørner */
+    width: 80%; /* Fylder 80% af skærmen */
+    max-width: 400px; /* Maks 400px bredde */
+    position: relative; /* Relativt placeret */
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Kolonne-layout */
+    gap: 16px; /* 16px mellem elementer */
+    font-weight: bold; /* Fed tekst */
+}
+
+.close { /* Luk-knap (X) */
+    color: #aaa; /* Grå farve */
+    position: absolute; /* Absolut placeret */
+    right: 15px; /* 15px fra højre */
+    top: 10px; /* 10px fra toppen */
+    font-size: 28px; /* Stor skrift */
+    font-weight: bold; /* Fed skrift */
+    cursor: pointer; /* Hånd-cursor */
+}
+
+.modal-input { /* Inputfelt i modal */
+    width: 100%; /* Fylder hele bredden */
+    padding: 8px; /* 8px polstring */
+    margin-top: 8px; /* 8px margen i toppen */
+    margin-bottom: 12px; /* 12px margen i bunden */
+    border-radius: 5px; /* Runde hjørner */
+    border: 1px solid #ccc; /* Lys grå kant */
+}
+
+.modal-btns { /* Knapper i modal */
+    display: flex; /* Flex layout */
+    gap: 8px; /* 8px mellem knapper */
+    justify-content: flex-end; /* Knapperne til højre */
+}
+.modal-btns button { /* Alle knapper i modal */
+    padding: 8px 14px; /* Polstring top/bund 8px, sider 14px */
+    border-radius: 5px; /* Runde hjørner */
+    border: none; /* Ingen kant */
+    cursor: pointer; /* Hånd-cursor */
+    background: #ff8360; /* Orange baggrund */
+    color: #fff8f0; /* Lys tekst */
+    font-weight: bold; /* Fed skrift */
+}
+.modal-btns button#closeBtn { /* Luk-knap */
+    background: #aaa; /* Grå baggrund */
+}
+
+@media only screen and (orientation: landscape) { /* Særlige regler for landskab */
+    .topnav .dropdown-menu { /* Dropdown-menuen i landskab */
+        display: flex; /* Eller flex */
+        background: transparent; /* Gennemsigtig baggrund */
+        border: none; /* Ingen kant */
+        box-shadow: none; /* Ingen skygge */
+    }
+    .topnav .dropdown-toggle { /* Dropdown-knappen i landskab */
+        display: none; /* Skjules */
+        background: transparent; /* Gennemsigtig baggrund */
+        border: none; /* Ingen kant */
+        box-shadow: none; /* Ingen skygge */
     }
 }
